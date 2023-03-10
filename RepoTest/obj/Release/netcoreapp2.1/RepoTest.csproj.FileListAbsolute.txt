@@ -1,0 +1,17 @@
+C:\Users\nikit\source\repos\купикота.рф\RepoTest\bin\Release\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\nikit\source\repos\купикота.рф\RepoTest\bin\Release\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\nikit\source\repos\купикота.рф\RepoTest\bin\Release\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+C:\Users\nikit\source\repos\купикота.рф\RepoTest\bin\Release\netcoreapp2.1\RepoTest.deps.json
+C:\Users\nikit\source\repos\купикота.рф\RepoTest\bin\Release\netcoreapp2.1\RepoTest.runtimeconfig.json
+C:\Users\nikit\source\repos\купикота.рф\RepoTest\bin\Release\netcoreapp2.1\RepoTest.runtimeconfig.dev.json
+C:\Users\nikit\source\repos\купикота.рф\RepoTest\bin\Release\netcoreapp2.1\RepoTest.dll
+C:\Users\nikit\source\repos\купикота.рф\RepoTest\bin\Release\netcoreapp2.1\RepoTest.pdb
+C:\Users\nikit\source\repos\купикота.рф\RepoTest\bin\Release\netcoreapp2.1\купикота.рф.dll
+C:\Users\nikit\source\repos\купикота.рф\RepoTest\bin\Release\netcoreapp2.1\купикота.рф.pdb
+C:\Users\nikit\source\repos\купикота.рф\RepoTest\obj\Release\netcoreapp2.1\RepoTest.csprojAssemblyReference.cache
+C:\Users\nikit\source\repos\купикота.рф\RepoTest\obj\Release\netcoreapp2.1\RepoTest.csproj.CoreCompileInputs.cache
+C:\Users\nikit\source\repos\купикота.рф\RepoTest\obj\Release\netcoreapp2.1\RepoTest.AssemblyInfoInputs.cache
+C:\Users\nikit\source\repos\купикота.рф\RepoTest\obj\Release\netcoreapp2.1\RepoTest.AssemblyInfo.cs
+C:\Users\nikit\source\repos\купикота.рф\RepoTest\obj\Release\netcoreapp2.1\RepoTest.csproj.CopyComplete
+C:\Users\nikit\source\repos\купикота.рф\RepoTest\obj\Release\netcoreapp2.1\RepoTest.dll
+C:\Users\nikit\source\repos\купикота.рф\RepoTest\obj\Release\netcoreapp2.1\RepoTest.pdb

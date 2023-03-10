@@ -1,0 +1,15 @@
+C:\Users\nikit\source\repos\купикота.рф\ConsoleApp\bin\Release\netcoreapp2.1\ConsoleApp.deps.json
+C:\Users\nikit\source\repos\купикота.рф\ConsoleApp\bin\Release\netcoreapp2.1\ConsoleApp.runtimeconfig.json
+C:\Users\nikit\source\repos\купикота.рф\ConsoleApp\bin\Release\netcoreapp2.1\ConsoleApp.runtimeconfig.dev.json
+C:\Users\nikit\source\repos\купикота.рф\ConsoleApp\bin\Release\netcoreapp2.1\ConsoleApp.dll
+C:\Users\nikit\source\repos\купикота.рф\ConsoleApp\bin\Release\netcoreapp2.1\купикота.рф.dll
+C:\Users\nikit\source\repos\купикота.рф\ConsoleApp\bin\Release\netcoreapp2.1\купикота.рф.pdb
+C:\Users\nikit\source\repos\купикота.рф\ConsoleApp\obj\Release\netcoreapp2.1\ConsoleApp.csprojAssemblyReference.cache
+C:\Users\nikit\source\repos\купикота.рф\ConsoleApp\obj\Release\netcoreapp2.1\ConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\nikit\source\repos\купикота.рф\ConsoleApp\obj\Release\netcoreapp2.1\ConsoleApp.AssemblyInfoInputs.cache
+C:\Users\nikit\source\repos\купикота.рф\ConsoleApp\obj\Release\netcoreapp2.1\ConsoleApp.AssemblyInfo.cs
+C:\Users\nikit\source\repos\купикота.рф\ConsoleApp\obj\Release\netcoreapp2.1\ConsoleApp.csproj.CopyComplete
+C:\Users\nikit\source\repos\купикота.рф\ConsoleApp\bin\Release\netcoreapp2.1\ConsoleApp.pdb
+C:\Users\nikit\source\repos\купикота.рф\ConsoleApp\obj\Release\netcoreapp2.1\ConsoleApp.dll
+C:\Users\nikit\source\repos\купикота.рф\ConsoleApp\obj\Release\netcoreapp2.1\ConsoleApp.pdb
+C:\Users\nikit\source\repos\купикота.рф\ConsoleApp\bin\Release\netcoreapp2.1\appsettings.json

@@ -1,0 +1,17 @@
+C:\Users\nikit\source\repos\купикота.рф\LogicTest\bin\Release\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\nikit\source\repos\купикота.рф\LogicTest\bin\Release\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\nikit\source\repos\купикота.рф\LogicTest\bin\Release\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+C:\Users\nikit\source\repos\купикота.рф\LogicTest\bin\Release\netcoreapp2.1\LogicTest.deps.json
+C:\Users\nikit\source\repos\купикота.рф\LogicTest\bin\Release\netcoreapp2.1\LogicTest.runtimeconfig.json
+C:\Users\nikit\source\repos\купикота.рф\LogicTest\bin\Release\netcoreapp2.1\LogicTest.runtimeconfig.dev.json
+C:\Users\nikit\source\repos\купикота.рф\LogicTest\bin\Release\netcoreapp2.1\LogicTest.dll
+C:\Users\nikit\source\repos\купикота.рф\LogicTest\bin\Release\netcoreapp2.1\LogicTest.pdb
+C:\Users\nikit\source\repos\купикота.рф\LogicTest\bin\Release\netcoreapp2.1\купикота.рф.dll
+C:\Users\nikit\source\repos\купикота.рф\LogicTest\bin\Release\netcoreapp2.1\купикота.рф.pdb
+C:\Users\nikit\source\repos\купикота.рф\LogicTest\obj\Release\netcoreapp2.1\LogicTest.csprojAssemblyReference.cache
+C:\Users\nikit\source\repos\купикота.рф\LogicTest\obj\Release\netcoreapp2.1\LogicTest.csproj.CoreCompileInputs.cache
+C:\Users\nikit\source\repos\купикота.рф\LogicTest\obj\Release\netcoreapp2.1\LogicTest.AssemblyInfoInputs.cache
+C:\Users\nikit\source\repos\купикота.рф\LogicTest\obj\Release\netcoreapp2.1\LogicTest.AssemblyInfo.cs
+C:\Users\nikit\source\repos\купикота.рф\LogicTest\obj\Release\netcoreapp2.1\LogicTest.csproj.CopyComplete
+C:\Users\nikit\source\repos\купикота.рф\LogicTest\obj\Release\netcoreapp2.1\LogicTest.dll
+C:\Users\nikit\source\repos\купикота.рф\LogicTest\obj\Release\netcoreapp2.1\LogicTest.pdb

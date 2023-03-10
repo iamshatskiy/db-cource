@@ -1,0 +1,12 @@
+C:\Users\nikit\source\repos\купикота.рф\купикота.рф\bin\Debuging\netcoreapp2.0\купикота.рф.deps.json
+C:\Users\nikit\source\repos\купикота.рф\купикота.рф\bin\Debuging\netcoreapp2.0\купикота.рф.runtimeconfig.json
+C:\Users\nikit\source\repos\купикота.рф\купикота.рф\bin\Debuging\netcoreapp2.0\купикота.рф.runtimeconfig.dev.json
+C:\Users\nikit\source\repos\купикота.рф\купикота.рф\bin\Debuging\netcoreapp2.0\купикота.рф.dll
+C:\Users\nikit\source\repos\купикота.рф\купикота.рф\bin\Debuging\netcoreapp2.0\купикота.рф.pdb
+C:\Users\nikit\source\repos\купикота.рф\купикота.рф\obj\Debuging\netcoreapp2.0\купикота.рф.csproj.CoreCompileInputs.cache
+C:\Users\nikit\source\repos\купикота.рф\купикота.рф\obj\Debuging\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\nikit\source\repos\купикота.рф\купикота.рф\obj\Debuging\netcoreapp2.0\купикота.рф.AssemblyInfoInputs.cache
+C:\Users\nikit\source\repos\купикота.рф\купикота.рф\obj\Debuging\netcoreapp2.0\купикота.рф.AssemblyInfo.cs
+C:\Users\nikit\source\repos\купикота.рф\купикота.рф\obj\Debuging\netcoreapp2.0\купикота.рф.dll
+C:\Users\nikit\source\repos\купикота.рф\купикота.рф\obj\Debuging\netcoreapp2.0\купикота.рф.pdb
+C:\Users\nikit\source\repos\купикота.рф\купикота.рф\obj\Debuging\netcoreapp2.0\купикота.рф.csprojAssemblyReference.cache

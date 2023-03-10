@@ -1,0 +1,43 @@
+﻿@model  IEnumerable<купикота.рф.Models.AdvertViewModels.DealViewModel>
+@{
+    ViewData["Title"] = "Входящие заявки";
+}
+
+<h4>Входящие заявки</h4>
+
+<table class="table">
+    <tr><th>Объявление</th><th>Имя</th><th>Телефон</th><th>Email</th><th></th></tr>
+    @foreach (var deal in Model)
+    {
+            <tr>
+                <td>
+                    <form asp-action="More" asp-route-id="@deal.AdvertId">
+                        <input type="hidden" id="aid" name="aid" value="@deal.AdvertId" />
+                        <input type="submit" class="btn btn-primary" asp-action="More"asp-controller="Adverts" asp-route-aid="@deal.AdvertId" value="Объявление" />
+
+
+                    </form>
+                </td>
+                <td>@deal.BuyerName</td>
+                <td>@deal.BuyerNum</td>
+                <td>@deal.BuyerEmail</td>
+
+                <td>
+
+                    <form asp-action="OwnerConformitionFalse" asp-controller="Deal" method="post">
+                        <input type="hidden" id="DealId" name="DealId" value="@deal.Id" />
+                        <input type="submit" class="btn btn-danger" asp-action="OwnerConformitionFalse" asp-controller="Deal" value="Удалить" />
+
+                    </form>
+                    <form asp-action="OwnerConformitionTrue" asp-controller="Deal" method="post">
+                        <input type="hidden" id="DealId" name="DealId" value="@deal.Id" />
+                        <input type="submit" class="btn btn-success" asp-action="OwnerConformitionTrue" asp-controller="Deal" value="Подтвердить" />
+
+                    </form>
+                </td>
+            </tr>
+    }
+</table>
+
+
+

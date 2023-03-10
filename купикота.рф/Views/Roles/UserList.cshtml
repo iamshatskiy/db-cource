@@ -1,0 +1,22 @@
+﻿@model IEnumerable<купикота.рф.Models.ApplicationUser>
+@inject UserManager<ApplicationUser> UserManager
+<h2>Управление ролями пользователей</h2>
+<table class="table">
+    @foreach (var user in Model)
+    {
+
+        var currentUser = await UserManager.GetUserAsync(User);
+
+        if (string.Compare(user.Id, currentUser.Id) != 0)
+        {
+            <tr>
+                <td>@user.Email</td>
+                <td>@user.name</td>
+                <td>@user.surname</td>
+                <td>
+                    <a class="btn btn-sm btn-primary" asp-action="Edit" asp-route-userid="@user.Id">Права доступа</a>
+                </td>
+            </tr>
+        }
+    }
+</table>

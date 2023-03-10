@@ -1,0 +1,21 @@
+﻿@model IEnumerable<купикота.рф.Models.DealViewModels.DealHistoryViewModel>
+
+@{
+    ViewData["Title"] = "История сделок";
+}
+
+<h4>История сделок</h4>
+
+<table class="table">
+    <tr><th>Id покупателя</th><th>Id продавца</th><th>Статус сделки</th></tr>
+    @foreach (var deal in Model)
+    {
+        <tr>
+            <td>@deal.BuyerId</td>
+            <td>@deal.OwnerId</td>
+            <td>@deal.IsConfirmed</td>
+
+            
+        </tr>
+    }
+</table>

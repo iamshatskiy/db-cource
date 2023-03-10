@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  
+  postgres:
+    container_name: cs-db
+    image: postgres:12.8
+    environment:
+      POSTGRES_DB: "CatShop"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "1234"
+    volumes:
+      - ./db_build:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"

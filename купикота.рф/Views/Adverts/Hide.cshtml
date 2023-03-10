@@ -1,0 +1,14 @@
+﻿@model купикота.рф.Models.AdvertViewModels.HideCommentViewModel
+@{
+    ViewData["Title"] = "Сокрытие объявления";
+}
+
+<h4>Комментарий к скрываемому объявлению.</h4>
+<label for="Comment">Комментарий к объявлению:</label>
+<form asp-action="Hide" asp-controller="Adverts" method="post" asp-route-id="@Model.AdvertId">
+        <textarea asp-for="Comment" class="form-control" name="Comment" id="Comment" rows="3"></textarea>
+        <span asp-validation-for="Comment" class="text-danger"></span>
+    <input type="hidden" class="form-control" asp-for="AdvertId" value="@Model.AdvertId" name="AdvertId" id="AdvertId" />
+    <input type="submit" value="Скрыть" asp-action="Hide" asp-controller="Adverts" class="btn btn-outline-secondary"/>
+</form>
+

@@ -1,0 +1,20 @@
+﻿@model IEnumerable<купикота.рф.Models.FeedbackViewModels.FeedbackViewModel>
+@{
+    ViewData["Title"] = "Отзывы покупателей";
+}
+
+<h2>Отзывы покупателей</h2>
+
+<table class="table">
+    <tr><th>Имя покупателя</th><th>Оценка</th><th>Дата</th><th>Отзыв</th></tr>
+    @foreach (var feed in Model)
+    {
+        <tr>
+            <td>@feed.BuyerName</td>
+            <td>@feed.Rate</td>
+            <td>@feed.FbDate</td>
+            <td>@feed.Feedback</td>
+        </tr>
+    }
+</table>
+

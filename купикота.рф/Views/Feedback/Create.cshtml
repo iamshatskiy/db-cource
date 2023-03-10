@@ -1,0 +1,20 @@
+﻿@model купикота.рф.Models.FeedbackViewModels.FeedbackViewModel
+@{
+    ViewData["Title"] = "Отзыв";
+}
+
+<h2>Отзыв о сделке</h2>
+
+<label for="Feedback">Комментарий к объявлению:</label>
+<form asp-action="Create" asp-controller="Feedback" method="post">
+    <textarea asp-for="Feedback" class="form-control" name="Feedback" id="Feedback" rows="3"></textarea>
+    <span asp-validation-for="Feedback" class="text-danger"></span>
+    <label for="Rate">Рейтинг:</label>
+    <div class="form-group">
+
+        <input asp-for="Rate" type="number" name="Rate" min="0" max="5" value="@Model.Rate" />
+    </div>
+    <input type="hidden" asp-for="Id" value="@Model.Id"/>
+    <input type="submit" value="Отправить отзыв" asp-action="Create" asp-controller="Feedback" class="btn btn-outline-secondary" />
+</form>
+

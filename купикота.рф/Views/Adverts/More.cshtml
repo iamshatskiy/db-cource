@@ -1,0 +1,91 @@
+﻿@using купикота.рф.Models
+@model купикота.рф.Models.AdvertViewModels.AdvertIndexView
+@inject UserManager<ApplicationUser> UserManager
+@inject SignInManager<ApplicationUser> SignInManager
+@{
+    ViewData["Title"] = "Выбранное Вами объявление";
+    var photoPath = "~/Images/" + (Model.Photo.Name ?? "nocat.png");
+    var cuserId = UserManager.GetUserId(User);
+    var cuser = await UserManager.GetUserAsync(User);
+    bool roleA = cuserId == null ?  false : await UserManager.IsInRoleAsync(cuser, "admin");
+    bool roleM = cuserId == null ?  false : await UserManager.IsInRoleAsync(cuser, "moderator");
+}
+
+
+<h2>Выбранное Вами объявление</h2>
+
+<div class="row featurette">
+    <div class="col-md-5">
+        <img class="img-thumbnail center-block" src="@photoPath" data-holder-rendered="true" asp-append-version="true" style="height: 300px; display: block;">
+    </div>
+    <div class="col-md-7">
+        <h2 class="featurette-heading"><b>@Model.Breed</b></h2>
+        <br />
+        <h4><b>Описание:</b> </h4>
+        <p class="lead">@Model.Desription.</p>
+        <p class="bg-info"><b>Город продажи:</b> @Model.City</p>
+        <p class="bg-info"><b>Возраст:</b> @Model.Age</p>
+        <p class="bg-info"><b>Стоимость:</b> @Model.Price</p>
+        <p class="bg-info"><b>Дата объявления:</b> @Model.Date</p>
+        <p class="bg-info"><b>Рейтинг продавца:</b> @Model.Rating</p>
+        <p class="bg-info"><b>Количество сделок:</b> @Model.AdvertCount</p>
+        <p class="bg-info">
+            <b>Продавец:</b>
+
+            @Model.OwnerName
+            (@Model.Email)
+        </p>
+        <br />
+        <form asp-action="OwnerIndex" asp-controller="Feedback" asp-route-id="@Model.OwnerId">
+            <input type="hidden" name="OwnerId" value="@Model.OwnerId"/>
+            <input class="btn btn-primary" asp-action="OwnerIndex" asp-controller="Feedback" type="submit" value="Информация о продавце" />
+        </form>
+        @if (SignInManager.IsSignedIn(User))
+        {
+
+            @if (cuserId == Model.OwnerId)
+            {
+                <form asp-action="Edit" asp-route-id="@Model.AdvertId" method="get">
+                    <input type="hidden" id="aid" name="aid" value="@Model.AdvertId" />
+                    @if (Model.IsVis == false)
+                    {
+                        <div class="text-danger">
+                            <strong>Внимание!</strong>Ваше объявление не видно для пользователей, измените его в соответствии с
+                            <input class="btn" asp-action="HideReason" asp-controller="Adverts" type="submit" value="замечанием" /> модератора.
+                        </div>
+                    }
+                    <br />
+                    <span><input type="submit" class="btn btn-primary" asp-action="Edit" asp-route-aid="@Model.AdvertId" value="Изменить" /></span>
+
+                </form>
+            }
+            else
+            {
+                <form asp-action="Create" asp-controller="Deal" method="post">
+                    <br />
+                    <input type="hidden" id="aid" name="aid" value="@Model.AdvertId" />
+                    <input type="hidden" id="OwnerId" name="OwnerId" value="@Model.OwnerId" />
+                    <input type="submit" class="btn btn-primary" asp-action="Create" asp-controller="Deal" value="Оставить заявку" />
+                </form>
+                @if (roleA == true || roleM == true)
+                {
+
+                    <form asp-action="Hide" asp-controller="Adverts" method="get">
+                        <br />
+                        <input type="hidden" id="aid" name="aid" value="@Model.AdvertId" />
+                        <input type="submit" class="btn btn-danger" asp-action="Hide" value="Скрыть" />
+                    </form>
+                }
+            }
+
+        }
+        else
+        {
+            <p class="bg-warning"> Чтобы оставить заявку, Вы должны быть авторизованы!</p>
+        }
+    </div>
+
+</div>
+<small>За дополнительными фото обращайтесь к продавцу по почте <b>@Model.Email</b></small>
+
+

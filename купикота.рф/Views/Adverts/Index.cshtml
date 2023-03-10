@@ -1,0 +1,79 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using купикота.рф.Models
+@model IEnumerable<купикота.рф.Models.AdvertViewModels.AdvertIndexView>
+
+@inject SignInManager<ApplicationUser> SignInManager
+
+
+<a name="top"> </a>
+<h2>Объявления</h2>
+@if (SignInManager.IsSignedIn(User))
+{
+    <a class="btn btn-sm btn-primary" asp-action="Create" asp-controller="Adverts">Создать новое объявление</a>
+}
+else
+{
+    <a class="btn btn-sm btn-primary" asp-controller="Account" asp-action="Login">Чтобы создать объявление, авторизируйтесь</a>
+}
+    
+    <form method="post">
+        <br />
+        <div class="form-inline">
+            <label class="control-label col-lg-1">Порода: </label>
+            <div class="form-group">
+                @Html.DropDownList("breed", (IEnumerable<SelectListItem>)ViewBag.breed, "Выбор породы", new { @class = "form-control col-md-4" })
+            </div>
+
+            <label class="control-label">Возраст: </label>
+            <input type="number" name="age" min="0" max="30" value="" />
+
+            <label class="control-label">Цена от: </label>
+            <input type="number" name="cost_low" min="0" max="2000000" />
+
+            <label class="control-label">Цена до: </label>
+            <input type="number" name="cost_high" min="0" max="2000000" />
+
+            <label class="control-label">Город: </label>
+            <input type="text" name="bcity"/>
+            <br />
+            <input type="submit" value="Фильтр" class="btn btn-default" />
+        </div>
+    </form>
+        <div class="container1">
+            <div class="row">
+                @foreach (var adv in Model)
+                {
+                    var photoPath = "~/Images/" + (adv.Photo.Name ?? "nocat.png");
+
+                    <div class="col-md-4 ">
+
+                        <div class="card box-shadow">
+
+                            <header class="center"><b>@adv.Breed</b></header>
+                            <img class="img-thumbnail center-block" src="@photoPath" data-holder-rendered="true" asp-append-version="true" style="height: 150px; display: block;">
+                            <div class="container">
+                                <right><small class="text-muted">Объявление от: @adv.Date</small></right>
+                                <p><b>Возраст:</b> @adv.Age</p>
+                                <p><b>Стоимость:</b> @adv.Price</p>
+                                <p><b>Город:</b> @adv.City</p>
+                                <p><b>Рейтинг продавца:</b> @adv.Rating</p>
+                                <form asp-action="More" asp-route-id="@adv.AdvertId">
+                                    <input type="hidden" id="aid" name="aid" value="@adv.AdvertId" />
+                                    <input type="submit" class="btn btn-primary" asp-action="More" asp-route-aid="@adv.AdvertId" value="Подробнее"/>
+
+
+                                </form>
+                                <br />
+
+                            </div>
+                        </div>
+                    </div>
+
+                }
+            </div>
+        </div>
+
+        <a href="#top"> НАВЕРХ </a>
+
+
+

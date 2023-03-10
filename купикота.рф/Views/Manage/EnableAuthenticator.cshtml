@@ -1,0 +1,52 @@
+﻿@model EnableAuthenticatorViewModel
+@{
+    ViewData["Title"] = "Подключение аутентификатора";
+    ViewData.AddActivePage(ManageNavPages.TwoFactorAuthentication);
+}
+
+<h4>@ViewData["Title"]</h4>
+<div>
+    <p>Чтобы использовать приложение для проверки подлинности, выполните следующие действия:</p>
+    <ol class="list">
+        <li>
+            <p>
+                Загрузите приложение для двухфакторной аутентификации, например Microsoft Authenticator, для
+                <a href="https://go.microsoft.com/fwlink/?Linkid=825071">Windows Phone</a>,
+                <a href="https://go.microsoft.com/fwlink/?Linkid=825072">Android</a> и
+                <a href="https://go.microsoft.com/fwlink/?Linkid=825073">iOS</a> или
+                Google Authenticator для
+                <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&amp;hl=en">Android</a> and
+                <a href="https://itunes.apple.com/us/app/google-authenticator/id388497605?mt=8">iOS</a>.
+            </p>
+        </li>
+        <li>
+            <p>Отсканируйте QR-код или введите этот ключ <kbd>@Model.SharedKey</kbd> в ваше приложение двухфакторной аутентификации. Пробелы и регистр значения не имеют.</p>
+            <div class="alert alert-info">Чтобы включить генерацию QR-кода, пожалуйста, прочитайте <a href="https://go.microsoft.com/fwlink/?Linkid=852423">документацию</a>.</div>
+            <div id="qrCode"></div>
+            <div id="qrCodeData" data-url="@Model.AuthenticatorUri"></div>
+        </li>
+        <li>
+            <p>
+                После того, как вы отсканируете QR-код или введете ключ выше, ваше приложение двухфакторной аутентификации предоставит вам
+                с уникальным кодом. Введите код в поле подтверждения ниже.
+            </p>
+            <div class="row">
+                <div class="col-md-6">
+                    <form method="post">
+                        <div class="form-group">
+                            <label asp-for="Code" class="control-label">Код верификации</label>
+                            <input asp-for="Code" class="form-control" autocomplete="off" />
+                            <span asp-validation-for="Code" class="text-danger"></span>
+                        </div>
+                        <button type="submit" class="btn btn-default">Проверить</button>
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    </form>
+                </div>
+            </div>
+        </li>
+    </ol>
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

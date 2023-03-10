@@ -1,0 +1,44 @@
+﻿@model купикота.рф.Models.AdvertViewModels.AdvertViewModel
+
+@{
+    ViewData["Title"] = "Объявление";
+}
+
+@inject UserManager<ApplicationUser> UserManager
+
+<h2>@ViewData["Title"]</h2>
+
+
+<form asp-action="Create" asp-controller="Adverts" method="post" enctype="multipart/form-data">
+    
+    <h4>Создание нового объявления.</h4>
+    <label>Фото</label>
+        <input  type="file" name="pic">     
+    <label for="Age">Возраст</label>
+    <div class="form-group">
+
+        <input type="number" name="Age" min="0" max="30" value="@Model.Age" />
+    </div>
+    <label for="BreedId">Порода</label>
+    <div class="form-group">
+
+        @Html.DropDownListFor(Model => Model.BreedId, (IEnumerable<SelectListItem>)ViewBag.breed, "Выбор породы", new { @class = "form-control col-md-4" })
+        <span asp-validation-for="BreedId" class="text-danger"></span>
+    </div>
+    <div style="height: 30px;">
+    </div>
+
+    <div class="form-group">
+        <label for="Descr">Описание</label>
+        <textarea asp-for="Descr" class="form-control" id="Descr" name="Descr" rows="3"></textarea>
+        <span asp-validation-for="Descr" class="text-danger"></span>
+    </div>
+    <label for="Price">Стоимость</label>
+    <div class="form-group">
+
+        <input type="number" asp-for="Price" name="Price" min="0" max="2000000" value="@Model.Price" />
+    </div>
+
+        <input type="submit" value="Создать" class="btn btn-outline-secondary" />
+</form>
+

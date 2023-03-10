@@ -1,0 +1,30 @@
+﻿@model IEnumerable<купикота.рф.Models.FeedbackViewModels.FeedbackViewModel>
+@{
+    ViewData["Title"] = "Оставьте свой отзыв";
+}
+
+<h2>Оставьте свой отзыв о сделках.</h2>
+
+<table class="table">
+    <tr><th>Имя продавца</th><th>Id продавца</th><th></th></tr>
+    @foreach (var feed in Model)
+    {
+        <tr>
+            <td>
+                <form asp-action="OwnerIndex" asp-controller="Feedback" method="post">
+                    <input type="hidden" name="OwnerId" id="OwnerId" value="@feed.OwnerId" />
+                    <input type="submit" class="btn btn-primary" asp-action="OwnerIndex" asp-controller="Feedback" value="@feed.OwnerName" />
+                </form>
+            </td>
+            <td>@feed.OwnerId</td>
+
+            <td>
+                <form asp-action="Create" asp-controller="Feedback" method="get">
+                    <input type="hidden" name="fid" id="fid" value="@feed.Id"/>
+                    <input type="submit" class="btn btn-primary" asp-action="Create" asp-controller="Feedback" value="Оставить отзыв" />
+                </form>
+            </td>
+        </tr>
+    }
+</table>
+

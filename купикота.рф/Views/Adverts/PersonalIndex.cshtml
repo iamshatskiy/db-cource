@@ -1,0 +1,55 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using купикота.рф.Models
+@model IEnumerable<купикота.рф.Models.AdvertViewModels.AdvertIndexView>
+
+@inject SignInManager<ApplicationUser> SignInManager
+
+
+
+<h2>Мои объявления</h2>
+
+<a class="btn btn-sm btn-primary" asp-action="Create">Создать новое объявление</a>
+
+
+<div class="container1">
+    <div class="row">
+        @foreach (var adv in Model)
+        {
+            var photoPath = "~/Images/" + (adv.Photo.Name ?? "nocat.png");
+            <div class="col-md-4 ">
+                <div class="card box-shadow">
+
+                    <header class="center"><b>@adv.Breed</b></header>
+                    <img class="img-thumbnail center-block" src="@photoPath" data-holder-rendered="true" asp-append-version="true" style="height: 150px; display: block;">
+                    <div class="container">
+                        <right><small class="text-muted">Объявление от: @adv.Date</small></right>
+                        <p><b>Возраст:</b> @adv.Age</p>
+                        <p><b>Стоимость:</b> @adv.Price</p>
+                        <p><b>Город:</b> @adv.City</p>
+                        <p><b>Рейтинг продавца:</b></p>
+                        <p><b>Количество сделок:</b> @adv.AdvertCount</p>
+                        @if (adv.IsVis == false)
+                        {
+                            <small class="text-danger">Объявление скрыто</small>
+                        }
+                        <div class="center-block">
+                            <form asp-action="More" asp-route-id="@adv.AdvertId" method="get">
+                                <input type="hidden" id="aid" name="aid" value="@adv.AdvertId" />
+                                <input type="submit" class="btn btn-primary" asp-action="More" asp-route-aid="@adv.AdvertId" value="Подробнее" />
+                                <span><input type="submit" class="btn btn-primary" asp-action="Edit" asp-route-aid="@adv.AdvertId" value="Изменить" /></span>
+
+
+                            </form>
+
+                        </div>
+                        <br />
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
+
+

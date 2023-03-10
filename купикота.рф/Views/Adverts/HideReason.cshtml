@@ -1,0 +1,17 @@
+﻿@model купикота.рф.Models.AdvertViewModels.HideCommentViewModel
+@{
+    ViewData["Title"] = "Причина сокрытия объявления";
+}
+
+<h2>Сообщение модератора о сокрытия Вашего объвления.</h2>
+
+<p class="lead">@Model.Comment.</p>
+<form asp-action="More" asp-route-id="@Model.AdvertId">
+    <input type="hidden" id="aid" name="aid" value="@Model.AdvertId" />
+    <input type="submit" class="btn btn-primary" asp-action="More" asp-route-aid="@Model.AdvertId" value="Ок" />
+</form>
+
+<small>Помните, модератор проверит Ваше объявление и, если Вы многократно совершите обман, к сожалению, Ваша учетная запись будет удалена навсегда :(</small>
+
+
+
